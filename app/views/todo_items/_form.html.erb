@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.label :description, 'Tell me what do you want to do?' %><br>
+    <%= f.text_field :description, class:'form-control'%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Add', class: 'btn btn-primary'%>
   </div>
 <% end %>

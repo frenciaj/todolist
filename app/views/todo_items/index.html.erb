@@ -1,12 +1,23 @@
+<div class="jumbotron">
+</div>
+<div class="container">
+
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Todo Items</h1>
+<h1 class="text-center">My To do List</h1>
 
-<table>
+<%= link_to new_todo_item_path do %>
+<span class='glyphicon glyphicon-plus'></span>Add
+<% end %>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Description</th>
-      <th colspan="3"></th>
+      <!-- <th colspan="3"></th> -->
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
@@ -14,14 +25,26 @@
     <% @todo_items.each do |todo_item| %>
       <tr>
         <td><%= todo_item.description %></td>
-        <td><%= link_to 'Show', todo_item %></td>
-        <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
-        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to todo_item do %>
+<span class='glyphicon glyphicon-search'></span>
+<% end %>
+
+        </td>
+        <td><%= link_to edit_todo_item_path(todo_item) do %>
+          <span class='glyphicon glyphicon-pencil'></span>
+          <% end %>
+        </td>
+        <td><%= link_to todo_item, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <span class='glyphicon glyphicon-trash'></span>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Todo item', new_todo_item_path %>
+</div>
+<footer>
+<div><h4 class="footer">thank you for using the to do list... have any idea? email me to make it happen...</h4></div>
+</footer>

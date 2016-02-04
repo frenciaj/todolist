@@ -1,9 +1,21 @@
+<div class="jumbotron">
+</div>
+<div class="container">
+
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
+<p class="edit">
+  <strong>I want to </strong>
   <%= @todo_item.description %>
 </p>
 
-<%= link_to 'Edit', edit_todo_item_path(@todo_item) %> |
-<%= link_to 'Back', todo_items_path %>
+<%= link_to edit_todo_item_path(@todo_item) do %>
+<span class='glyphicon glyphicon-pencil resize'></span>
+
+<% end %>
+<%= link_to todo_items_path do %>
+<span class='glyphicon glyphicon-arrow-left resize'></span>
+
+<% end %>
+</div>

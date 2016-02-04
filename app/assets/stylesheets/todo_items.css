@@ -2,3 +2,47 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+.jumbotron {
+  background-image: url('http://blog.kurtosys.com/wp-content/uploads/2015/01/advisor-to-do-list.jpg');
+  background-size: cover;
+  heigth: 400px;
+}
+
+.text-center {
+  font-family: 'Indie Flower', cursive;
+  font-size: 4em;
+
+}
+h4 {
+  font-family: 'Indie Flower', cursive;
+ text-align: center;
+}
+
+.glyphicon-plus {
+  font-size: 50px;
+}
+
+.resize {
+  font-size: 40px;
+}
+
+.btn-primary {
+  margin: 20px 0;
+}
+.field {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5em;
+}
+
+.edit {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+}
+
+footer {
+  background-color: lightgray;
+  position: absolute;
+  margin-top: 205px;
+  width: 100%;
+  height: 100px;
+}

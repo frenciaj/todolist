@@ -1,6 +1,19 @@
-<h1>Editing Todo Item</h1>
+<div class="jumbotron">
+</div>
+<div class="container">
+
+
+<h1 class='text-center'>Edit To do Item</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @todo_item %> |
-<%= link_to 'Back', todo_items_path %>
+<%= link_to @todo_item do %>
+<span class='glyphicon glyphicon-search resize'></span>
+
+<% end %>
+<%= link_to todo_items_path do %>
+<span class='glyphicon glyphicon-arrow-left resize'></span>
+
+<% end %>
+
+</div>
